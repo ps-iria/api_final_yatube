@@ -38,6 +38,12 @@ class FollowSerializer(serializers.ModelSerializer):
         required=True
     )
 
+    def validate_following(self, following):
+        user = self.context['request'].user
+        if user == following:
+            raise serializers.ValidationError('Нельзя подписываться на себя')
+        return following
+
     class Meta:
         fields = ('user', 'following')
         model = Follow
