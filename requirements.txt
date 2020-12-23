@@ -1,6 +1,8 @@
 requests
 django
+pillow
 pytest
 pytest-django
 djangorestframework
 djangorestframework-simplejwt
+django-filters
