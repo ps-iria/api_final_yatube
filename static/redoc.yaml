@@ -503,6 +503,10 @@ components:
       title: Группы
       type: object
       properties:
+        id:
+          type: integer
+          title: ID  группы
+          readOnly: true
         title:
           type: string
           title: На кого подписаться
